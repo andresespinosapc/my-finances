@@ -72,14 +72,14 @@ enum Currency {
 
 model MoneyAccount {
   id                String        @id @default(cuid())
-  name              String
+  name              String        @unique
   payerTransactions Transaction[] @relation("PayerAccount")
   payeeTransactions Transaction[] @relation("PayeeAccount")
 }
 
 model TransactionCategory {
   id               String                @id @default(cuid())
-  name             String
+  name             String                @unique
   parentCategoryId String?
   parentCategory   TransactionCategory?  @relation("ParentCategory", fields: [parentCategoryId], references: [id])
   childCategories  TransactionCategory[] @relation("ParentCategory")
