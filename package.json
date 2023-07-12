@@ -29,9 +29,9 @@
     "zod_utilz": "^0.7.3"
   },
   "devDependencies": {
-    "@playwright/test": "^1.35.0",
+    "@playwright/test": "^1.35.1",
     "@types/eslint": "^8.37.0",
-    "@types/node": "^18.16.0",
+    "@types/node": "^20.4.1",
     "@types/prettier": "^2.7.2",
     "@types/react": "^18.2.6",
     "@types/react-dom": "^18.2.4",
@@ -45,7 +45,8 @@
     "prettier-plugin-tailwindcss": "^0.2.8",
     "prisma": "^4.14.0",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5.0.4"
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
   },
   "ct3aMetadata": {
     "initVersion": "7.13.1"
