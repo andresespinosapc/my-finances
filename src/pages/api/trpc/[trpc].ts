@@ -3,6 +3,10 @@ import { env } from "~/env.mjs";
 import { appRouter } from "~/server/api/root";
 import { createTRPCContext } from "~/server/api/trpc";
 
+console.log('yeah')
+console.log(env.NODE_ENV);
+console.log(env.SANTANDER_RUT);
+
 // export API handler
 export default createNextApiHandler({
   router: appRouter,

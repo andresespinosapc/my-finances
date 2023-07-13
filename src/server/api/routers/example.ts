@@ -1,3 +1,5 @@
+import { env } from '~/env.mjs';
+import { SyncSantander } from './../commands/SyncSantander';
 import { z } from "zod";
 import {
   createTRPCRouter,
@@ -20,5 +22,12 @@ export const exampleRouter = createTRPCRouter({
 
   getSecretMessage: protectedProcedure.query(() => {
     return "you can now see this secret message!";
+  }),
+
+  syncSantander: publicProcedure.mutation(async () => {
+    await new SyncSantander().perform({
+      rut: env.SANTANDER_RUT,
+      password: env.SANTANDER_PASSWORD,
+    });
   }),
 });
