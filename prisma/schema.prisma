@@ -89,6 +89,7 @@ model Transaction {
   id                         String               @id @default(cuid())
   payerAccountId             String
   payeeAccountId             String
+  date                       DateTime
   amount                     Float
   currency                   Currency             @default(CLP)
   categoryId                 String?
