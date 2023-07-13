@@ -1,3 +1,4 @@
+import { EXTERNAL_ACCOUNT_NAME } from './../src/constants';
 import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
@@ -5,11 +6,11 @@ const prisma = new PrismaClient();
 async function main() {
   await prisma.moneyAccount.upsert({
     where: {
-      name: 'External',
+      name: EXTERNAL_ACCOUNT_NAME,
     },
     update: {},
     create: {
-      name: 'External',
+      name: EXTERNAL_ACCOUNT_NAME,
     }
   });
 }
